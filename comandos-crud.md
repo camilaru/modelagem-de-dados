@@ -46,3 +46,43 @@ VALUES ('iPad Mini', 'Tablet Apple com tela retina de 4k. ', 4);
 INSERT INTO produtos(nome, descricao, fabricante_id)
 VALUES (' Ultrabook', 'Equipamento com processador AMD Ryzen, 12 GB de RAM. ', 2);
 ```
+
+## SELECT
+
+### Ler dados da tabela produtos
+
+```sql
+SELECT * FROM produtos;
+
+SELECT nome FROM produtos;
+
+SELECT descricao, nome FROM produtos;
+
+SELECT nome FROM produtos WHERE fabricante_id=4;
+
+-- OPERADOR DIFERENTE: ! <>
+
+SELECT nome FROM produtos WHERE fabricante_id != 4;
+SELECT nome FROM produtos WHERE fabricante_i <> 4;
+
+--OPERADOR OU: OR
+SELECT nome, descricao FROM produtos
+WHERE fabricante_id = 2 OR fabricante_id =3;
+
+--ORDEM CRESCENTE
+SELECT nome, descricao FROM produtos ORDER BY nome;
+
+--ORDEM DECRESCENTE
+SELECT nome, descricao FROM produtos ORDER BY nome DESC;
+
+-- COUNT (CAMPO ESPECIAL) é uma função de contagem de registros
+SELECT COUNT(id) AS quantidades FROM produtos;
+
+
+
+
+
+
+```
+
+
