@@ -78,11 +78,26 @@ SELECT nome, descricao FROM produtos ORDER BY nome DESC;
 -- COUNT (CAMPO ESPECIAL) é uma função de contagem de registros
 SELECT COUNT(id) AS quantidades FROM produtos;
 
+```
+## UPDATE (💀SEMPRE COM WHERE!!!💀)
 
+```sql
+UPDATE fabricantes SET nome = 'Asus do Brasil' WHERE id = 2;
 
+-- 1) Na tabela de produtos, atualize o produto Geladeira mudando o fabricante de Brastemp para Samsung
 
+UPDATE produtos SET fabricante_id = 6 WHERE id = 4;  
 
+-- 2) Na tabela de produtos, referente ao produto Xbox 123, mude o nome para "xbox One" e a descrição para "Novo lançamento com parcelamneto em 25x."
 
+UPDATE produtos SET nome = 'Xbox One',
+descricao = 'Novo lançamento com parcelamento em 25x.'
+WHERE id = 5; 
 ```
 
+## DELETE (💀🔥SEMPRE COM WHERE!!!🔥💀)
 
+```sql
+DELETE FROM produtos WHERE id = 3;
+DELETE FROM fabricantes WHERE id = 1;
+```
